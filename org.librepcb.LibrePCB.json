@@ -1,6 +1,6 @@
 {
     "app-id": "org.librepcb.LibrePCB",
-    "runtime": "org.kde.Sdk",
+    "runtime": "org.kde.Platform",
     "runtime-version": "5.12",
     "sdk": "org.kde.Sdk",
     "command": "librepcb",
