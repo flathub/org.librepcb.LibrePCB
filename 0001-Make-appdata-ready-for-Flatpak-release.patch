@@ -1,17 +1,8 @@
-From 9a8cbc67466f452d7d6786743712ecb55f653fa0 Mon Sep 17 00:00:00 2001
-From: "U. Bruhin" <urbibruhin@bluewin.ch>
-Date: Tue, 27 Nov 2018 22:05:53 +0100
-Subject: [PATCH] Make appdata ready for Flatpak release
-
----
- share/metainfo/org.librepcb.LibrePCB.appdata.xml | 21 ++++++++-------------
- 1 file changed, 8 insertions(+), 13 deletions(-)
-
-diff --git a/share/metainfo/org.librepcb.LibrePCB.appdata.xml b/share/metainfo/org.librepcb.LibrePCB.appdata.xml
-index fe75c93..406b6d6 100644
---- a/share/metainfo/org.librepcb.LibrePCB.appdata.xml
-+++ b/share/metainfo/org.librepcb.LibrePCB.appdata.xml
-@@ -5,9 +5,10 @@
+diff --git share/metainfo/org.librepcb.LibrePCB.appdata.xml share/metainfo/org.librepcb.LibrePCB.appdata.xml
+index f7d87fbd6..9aec61538 100644
+--- share/metainfo/org.librepcb.LibrePCB.appdata.xml
++++ share/metainfo/org.librepcb.LibrePCB.appdata.xml
+@@ -5,28 +5,19 @@
    <project_license>GPL-3.0</project_license>
    <name>LibrePCB</name>
    <summary>Design Schematics and PCBs</summary>
@@ -23,7 +14,10 @@ index fe75c93..406b6d6 100644
      <p>Key Features:</p>
      <ul>
        <li>Cross-platform (Unix/Linux, Mac OS X, Windows)</li>
-@@ -17,16 +18,6 @@
+-​      <li>All-in-one (project management, library/schematic/board editors)</li>
++      <li>All-in-one (project management, library/schematic/board editors)</li>
+       <li>Intuitive, modern and easy-to-use graphical user interface</li>
+       <li>Very powerful library design with some innovative concepts</li>
        <li>Human-readable file formats</li>
        <li>Open Source (GNU GPLv3)</li>
      </ul>
@@ -40,24 +34,50 @@ index fe75c93..406b6d6 100644
    </description>
  
    <screenshots>
-@@ -58,11 +49,15 @@
-   <url type="homepage">https://librepcb.org</url>
-   <url type="bugtracker">https://github.com/LibrePCB/LibrePCB/issues</url>
-   <url type="help">https://docs.librepcb.org/</url>
--  
-+
-   <provides>
-     <binary>librepcb</binary>
+@@ -64,5 +55,46 @@
      <binary>librepcb-cli</binary>
    </provides>
--  
-+
+ 
 +  <releases>
-+    <release version="0.1.2" date="2019-07-13"/>
++    <release version="0.1.3" date="2019-11-30" type="stable">
++      <description>
++        <p>Highlights:</p>
++        <ul>
++          <li>Design rule check for boards</li>
++          <li>BOM export to CSV</li>
++          <li>Export boards to PDF</li>
++        </ul>
++      </description>
++      <url type="details">https://librepcb.org/blog/2019-11-30_release_0.1.3/</url>
++    </release>
++    <release version="0.1.2" date="2019-07-14" type="stable">
++      <description>
++        <p>Highlights:</p>
++        <ul>
++          <li>Support latest build environments (GCC 9.x and Qt 5.13)</li>
++          <li>Improved table widgets</li>
++        </ul>
++      </description>
++      <url type="details">https://librepcb.org/blog/2019-07-14_release_0.1.2/</url>
++    </release>
++    <release version="0.1.1" date="2019-04-21" type="stable">
++      <description>
++        <p>Highlights:</p>
++        <ul>
++          <li>Design rule check for library elements</li>
++          <li>More powerful symbol variants</li>
++          <li>Transactional file system</li>
++        </ul>
++      </description>
++      <url type="details">https://librepcb.org/blog/2019-04-21_release_0.1.1/</url>
++    </release>
++    <release version="0.1.0" date="2018-11-25" type="stable">
++      <description>
++        <p>The first stable release!</p>
++      </description>
++      <url type="details">https://librepcb.org/blog/2018-11-25_release_0.1.0/</url>
++    </release>
 +  </releases>
 +
    <content_rating type="oars-1.1"/>
  </component>
--- 
-2.7.4
-

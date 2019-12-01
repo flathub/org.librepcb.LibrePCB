@@ -21,11 +21,12 @@
                 {
                     "type": "git",
                     "url": "https://github.com/LibrePCB/LibrePCB",
-                    "tag": "0.1.2",
-                    "commit": "acdd94d9d2310f79215125b999153e9da88a9376"
+                    "tag": "0.1.3",
+                    "commit": "56bc60d347ff67df0fe1d57807d03f0606de557f"
                 },
                 {
                     "type": "patch",
+                    "strip-components": 0,
                     "path": "0001-Make-appdata-ready-for-Flatpak-release.patch"
                 }
             ]
