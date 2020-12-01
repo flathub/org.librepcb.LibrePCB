@@ -1,7 +1,7 @@
 {
     "app-id": "org.librepcb.LibrePCB",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.14",
+    "runtime-version": "5.15",
     "sdk": "org.kde.Sdk",
     "command": "librepcb",
     "finish-args": [
@@ -21,8 +21,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/LibrePCB/LibrePCB",
-                    "tag": "0.1.4",
-                    "commit": "ae04eef5a71b5ba66ae2cee6b631c1c933ace535"
+                    "tag": "0.1.5",
+                    "commit": "a435c5095c6f94df4da130fe832ea97f42d17901"
                 }
             ]
         }
