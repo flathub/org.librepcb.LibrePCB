@@ -15,14 +15,14 @@
     "modules": [
         {
             "name": "librepcb",
-            "buildsystem": "qmake",
+            "buildsystem": "cmake",
             "builddir": true,
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/LibrePCB/LibrePCB",
-                    "tag": "0.1.5",
-                    "commit": "a435c5095c6f94df4da130fe832ea97f42d17901"
+                    "tag": "0.1.6",
+                    "commit": "c4f31642899f0ed6b535fe3edafbd3315eddd490"
                 }
             ]
         }
