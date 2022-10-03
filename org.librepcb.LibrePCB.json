@@ -21,8 +21,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/LibrePCB/LibrePCB",
-                    "tag": "0.1.6",
-                    "commit": "c4f31642899f0ed6b535fe3edafbd3315eddd490"
+                    "tag": "0.1.7",
+                    "commit": "ba553c6fbe53ac2f1eadfc337881285705f2fcc3"
                 }
             ]
         }
