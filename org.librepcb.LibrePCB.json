@@ -17,6 +17,9 @@
             "name": "librepcb",
             "buildsystem": "cmake-ninja",
             "builddir": true,
+            "config-opts": [
+                "-DUSE_OPENCASCADE=0"
+            ],
             "sources": [
                 {
                     "type": "git",
