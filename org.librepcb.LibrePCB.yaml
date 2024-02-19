@@ -1,61 +1,61 @@
 app-id: org.librepcb.LibrePCB
 runtime: org.kde.Platform
-runtime-version: '5.15-22.08'
+runtime-version: 5.15-22.08
 sdk: org.kde.Sdk
 command: librepcb
 finish-args:
 # disabling the Wayland permission works around glitches in the 3D viewer and issues with window switching
 # - --socket=wayland
-- --socket=x11
-- --share=ipc
-- --device=dri
-- --share=network
-- --filesystem=home
+  - --socket=x11
+  - --share=ipc
+  - --device=dri
+  - --share=network
+  - --filesystem=home
 modules:
-- shared-modules/glu/glu-9.json
+  - shared-modules/glu/glu-9.json
 
-- name: opencascade
-  buildsystem: cmake-ninja
-  builddir: true
-  config-opts: # build options adopted from https://github.com/LibrePCB/docker-librepcb-dev/blob/eb077a5a7e7f3ab1ff2cf30bf866fd98edb6a0c5/ubuntu-18.04-qt5.15.2/Dockerfile#L73-L101
-  - -DCMAKE_BUILD_TYPE=Release
-  - -DINSTALL_DIR=/app
-  - -DBUILD_LIBRARY_TYPE=Shared
-  - -DBUILD_MODULE_ApplicationFramework=0
-  - -DBUILD_MODULE_DataExchange=1
-  - -DBUILD_MODULE_Draw=0
-  - -DBUILD_MODULE_FoundationClasses=0
-  - -DBUILD_MODULE_ModelingAlgorithms=0
-  - -DBUILD_MODULE_ModelingData=0
-  - -DBUILD_MODULE_Visualization=0
-  - -DUSE_DRACO=0
-  - -DUSE_FREEIMAGE=0
-  - -DUSE_FREETYPE=0
-  - -DUSE_GLES2=0
-  - -DUSE_OPENGL=0
-  - -DUSE_OPENVR=0
-  - -DUSE_RAPIDJSON=0
-  - -DUSE_TBB=0
-  - -DUSE_TK=0
-  - -DUSE_VTK=0
-  sources:
-  - type: archive
-    url: https://github.com/Open-Cascade-SAS/OCCT/archive/refs/tags/V7_7_0.tar.gz
-    sha256: 4cadb6d0a9e92dbb1a4eeb48d497b009d8138ffde64f2468d4a1c3f10a052722
-    x-checker-data:
-      type: anitya
-      project-id: 16221
-      url-template: https://github.com/Open-Cascade-SAS/OCCT/archive/refs/tags/V${major}_${minor}_$patch.tar.gz
+  - name: opencascade
+    buildsystem: cmake-ninja
+    builddir: true
+    config-opts: # build options adopted from https://github.com/LibrePCB/docker-librepcb-dev/blob/eb077a5a7e7f3ab1ff2cf30bf866fd98edb6a0c5/ubuntu-18.04-qt5.15.2/Dockerfile#L73-L101
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DINSTALL_DIR=/app
+      - -DBUILD_LIBRARY_TYPE=Shared
+      - -DBUILD_MODULE_ApplicationFramework=0
+      - -DBUILD_MODULE_DataExchange=1
+      - -DBUILD_MODULE_Draw=0
+      - -DBUILD_MODULE_FoundationClasses=0
+      - -DBUILD_MODULE_ModelingAlgorithms=0
+      - -DBUILD_MODULE_ModelingData=0
+      - -DBUILD_MODULE_Visualization=0
+      - -DUSE_DRACO=0
+      - -DUSE_FREEIMAGE=0
+      - -DUSE_FREETYPE=0
+      - -DUSE_GLES2=0
+      - -DUSE_OPENGL=0
+      - -DUSE_OPENVR=0
+      - -DUSE_RAPIDJSON=0
+      - -DUSE_TBB=0
+      - -DUSE_TK=0
+      - -DUSE_VTK=0
+    sources:
+      - type: archive
+        url: https://github.com/Open-Cascade-SAS/OCCT/archive/refs/tags/V7_8_0.tar.gz
+        sha256: 096cd0f268fa9f6a50818e1d628ac92ecf87e10fd72187e2e8d6be57dfe12530
+        x-checker-data:
+          type: anitya
+          project-id: 16221
+          url-template: https://github.com/Open-Cascade-SAS/OCCT/archive/refs/tags/V${major}_${minor}_$patch.tar.gz
 
-- name: librepcb
-  buildsystem: cmake-ninja
-  builddir: true
-  sources:
-  - type: git
-    url: https://github.com/LibrePCB/LibrePCB
-    tag: 1.0.0
-    commit: 9edb6ede393e5b48785f95252f81a027db4b718a
-    x-checker-data:
-      type: anitya
-      project-id: 154259
-      tag-template: $version
+  - name: librepcb
+    buildsystem: cmake-ninja
+    builddir: true
+    sources:
+      - type: git
+        url: https://github.com/LibrePCB/LibrePCB
+        tag: 1.0.0
+        commit: 9edb6ede393e5b48785f95252f81a027db4b718a
+        x-checker-data:
+          type: anitya
+          project-id: 154259
+          tag-template: $version
