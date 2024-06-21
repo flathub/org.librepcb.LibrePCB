@@ -41,8 +41,8 @@ modules:
   - -DUSE_VTK=0
   sources:
   - type: archive
-    url: https://github.com/Open-Cascade-SAS/OCCT/archive/refs/tags/V7_7_2.tar.gz
-    sha256: 0b3cce50b859cd2ed6809fab0de2eb8c8424768bdb6307834766bad0b583605b
+    url: https://github.com/Open-Cascade-SAS/OCCT/archive/refs/tags/V7_8_1.tar.gz
+    sha256: 7321af48c34dc253bf8aae3f0430e8cb10976961d534d8509e72516978aa82f5
     x-checker-data:
       type: anitya
       project-id: 16221
