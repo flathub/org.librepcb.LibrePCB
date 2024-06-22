@@ -46,10 +46,9 @@ modules:
   - type: archive
     url: https://github.com/Open-Cascade-SAS/OCCT/archive/refs/tags/V7_7_2.tar.gz
     sha256: 0b3cce50b859cd2ed6809fab0de2eb8c8424768bdb6307834766bad0b583605b
-    x-checker-data:
-      type: anitya
-      project-id: 16221
-      url-template: https://github.com/Open-Cascade-SAS/OCCT/archive/refs/tags/V${major}_${minor}_$patch.tar.gz
+    # x-checker-data:
+    #  No auto update because we want a specific version of OCCT which is
+    #  known to be working well for us and is in sync with our other releases.
 
 - name: librepcb
   buildsystem: cmake-ninja
