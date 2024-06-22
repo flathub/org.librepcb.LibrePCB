@@ -11,6 +11,9 @@ finish-args:
 - --device=dri
 - --share=network
 - --filesystem=home
+cleanup:
+- /include
+- /lib/cmake
 modules:
 - shared-modules/glu/glu-9.json
 
