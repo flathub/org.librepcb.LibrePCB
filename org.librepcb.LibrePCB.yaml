@@ -1,6 +1,6 @@
 app-id: org.librepcb.LibrePCB
 runtime: org.kde.Platform
-runtime-version: '5.15-23.08'
+runtime-version: '6.7'
 sdk: org.kde.Sdk
 command: librepcb
 finish-args:
@@ -56,11 +56,9 @@ modules:
   sources:
   - type: git
     url: https://github.com/LibrePCB/LibrePCB
-    tag: 1.1.0
-    commit: 18a3d4589c2b0cddce8e5aaabf353e47204b99a0
+    tag: 1.2.0
+    commit: f079fa97bc22cb9890eca5fa9591d483771c8e7e
     x-checker-data:
       type: anitya
       project-id: 154259
       tag-template: $version
-  - type: patch
-    path: 0001-fix-open-keyboard-reference-pdf.patch
