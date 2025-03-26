@@ -1,7 +1,11 @@
 app-id: org.librepcb.LibrePCB
 runtime: org.kde.Platform
 runtime-version: '6.8'
-sdk: org.kde.Sdk
+sdk: org.kde.Sdk//6.8
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.rust-stable
+build-options:
+  append-path: /usr/lib/sdk/rust-stable/bin
 command: librepcb
 finish-args:
 # disabling the Wayland permission works around glitches in the 3D viewer and issues with window switching
@@ -51,8 +55,15 @@ modules:
     #  known to be working well for us and is in sync with our other releases.
 
   - name: librepcb
-    buildsystem: cmake-ninja
-    builddir: true
+    buildsystem: simple
+    build-options:
+      env:
+        CARGO_HOME: /run/build/librepcb/cargo
+    build-commands:
+      - cargo --offline fetch --manifest-path libs/librepcb/rust-core/Cargo.toml --verbose
+      - mkdir build && cd build
+        && cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/app
+        && ninja && ninja install
     sources:
       - type: git
         url: https://github.com/LibrePCB/LibrePCB
@@ -62,3 +73,4 @@ modules:
           type: anitya
           project-id: 154259
           tag-template: $version
+      - cargo-sources.json
