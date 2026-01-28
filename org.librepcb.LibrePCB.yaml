@@ -68,7 +68,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/LibrePCB/LibrePCB
-        tag: 2.0.0-rc1
+        tag: 2.0.0
+        commit: b86f606c8caa44d6e9d27164cb0f44c16d7ef6e2
         x-checker-data:
           type: anitya
           project-id: 154259
