@@ -62,14 +62,13 @@ modules:
     build-commands:
       - cargo --offline fetch --manifest-path libs/librepcb/rust-core/Cargo.toml --verbose
       - cargo --offline fetch --manifest-path libs/slint/Cargo.toml --verbose
-      - mkdir build && cd build
-        && cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/app -DCMAKE_INSTALL_LIBDIR=lib
-        && ninja && ninja install
+      - mkdir build && cd build && cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/app
+        -DCMAKE_INSTALL_LIBDIR=lib && ninja && ninja install
     sources:
       - type: git
         url: https://github.com/LibrePCB/LibrePCB
-        tag: 2.0.0
-        commit: b86f606c8caa44d6e9d27164cb0f44c16d7ef6e2
+        tag: 2.0.1
+        commit: 083755c6079e7fa3c2f0a84826c40218ae8307da
         x-checker-data:
           type: anitya
           project-id: 154259
