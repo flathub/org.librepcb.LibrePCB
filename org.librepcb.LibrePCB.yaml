@@ -64,7 +64,7 @@ modules:
       - cargo --offline fetch --manifest-path libs/slint/Cargo.toml --verbose
       - mkdir build && cd build
         && cmake .. -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/app -DCMAKE_INSTALL_LIBDIR=lib
-        && ninja && ninja install
+        && ninja -j4 && ninja install
     sources:
       - type: git
         url: https://github.com/LibrePCB/LibrePCB
