@@ -74,4 +74,5 @@ modules:
           type: anitya
           project-id: 154259
           tag-template: $version
-      - cargo-sources.json
+      - rust-core-sources.json
+      - slint-sources.json
