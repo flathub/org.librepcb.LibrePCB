@@ -1,4 +1,5 @@
 {
     "automerge-flathubbot-prs": true,
-    "branches": ["master", "beta"]
+    "branches": ["master", "beta"],
+    "only-arches": ["x86_64"]
 }
