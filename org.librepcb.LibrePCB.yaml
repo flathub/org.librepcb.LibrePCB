@@ -24,6 +24,9 @@ modules:
   - name: opencascade
     buildsystem: cmake-ninja
     builddir: true
+    build-options:
+      env:
+        FLATPAK_BUILDER_N_JOBS: '8'
     config-opts: # build options adopted from https://github.com/LibrePCB/docker-librepcb-dev/blob/eb077a5a7e7f3ab1ff2cf30bf866fd98edb6a0c5/ubuntu-18.04-qt5.15.2/Dockerfile#L73-L101
       - -DCMAKE_BUILD_TYPE=Release
       - -DINSTALL_DIR=/app
@@ -59,6 +62,7 @@ modules:
     build-options:
       env:
         CARGO_HOME: /run/build/librepcb/cargo
+        FLATPAK_BUILDER_N_JOBS: '8'
     build-commands:
       - cargo --offline fetch --manifest-path libs/librepcb/rust-core/Cargo.toml --verbose
       - cargo --offline fetch --manifest-path libs/slint/Cargo.toml --verbose
@@ -74,5 +78,7 @@ modules:
           type: anitya
           project-id: 154259
           tag-template: $version
+      - type: patch
+        path: 0001-reduce-slint-compilation-units.patch
       - rust-core-sources.json
       - slint-sources.json
