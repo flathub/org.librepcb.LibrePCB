@@ -79,6 +79,6 @@ modules:
           project-id: 154259
           tag-template: $version
       - type: patch
-        path: 0001-reduce-slint-compilation-units.patch
+        path: 0001-increase-slint-compilation-units.patch
       - rust-core-sources.json
       - slint-sources.json
