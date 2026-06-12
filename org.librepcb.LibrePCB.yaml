@@ -72,8 +72,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/LibrePCB/LibrePCB
-        tag: 2.1.0
-        commit: af57cc9854e40d3261e13b79a4dadcada4ada4ba
+        tag: 2.1.1
+        commit: 06465bf12659a2c20464b3389929a28427d28ad7
         x-checker-data:
           type: anitya
           project-id: 154259
